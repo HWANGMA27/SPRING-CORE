@@ -13,3 +13,4 @@
 > * 1번 리팩토링 스프링 컨테이너 적용
 > * @Bean @Configuration
 > * BeanDefinition 및 Bean Role Study
+> * Bean 조회 및 Junit을 활용한 테스트 케이스 
