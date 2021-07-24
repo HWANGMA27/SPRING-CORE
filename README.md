@@ -14,3 +14,4 @@
 > * @Bean @Configuration
 > * BeanDefinition 및 Bean Role Study
 > * Bean 조회 및 Junit을 활용한 테스트 케이스 
+> * Java 외 XML 설정으로 Bean Config 테스트 
