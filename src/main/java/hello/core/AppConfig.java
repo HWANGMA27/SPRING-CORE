@@ -14,6 +14,9 @@ import org.springframework.context.annotation.Configuration;
 //Spring container register @bean object using @Configuration class
 @Configuration
 public class AppConfig {
+    //@Bean memberService -> new MemoryMemberRepository()
+    //@Bean orderService -> new MemoryMemberRepository()
+
     //using this annotation to register on spring container
     @Bean
     public MemberService memberService(){

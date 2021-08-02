@@ -15,3 +15,6 @@
 > * BeanDefinition 및 Bean Role Study
 > * Bean 조회 및 Junit을 활용한 테스트 케이스 
 > * Java 외 XML 설정으로 Bean Config 테스트 
+> * Spring 싱글톤 패턴 활용법
+
+티스토리 : https://dvpdvp.tistory.com/

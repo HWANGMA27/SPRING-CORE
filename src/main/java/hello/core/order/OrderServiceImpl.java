@@ -5,6 +5,7 @@ import hello.core.discount.FixDiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import hello.core.member.MemberService;
 import hello.core.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService{
@@ -21,6 +22,10 @@ public class OrderServiceImpl implements OrderService{
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
         Member member = memberRepository.findById(memberId);
         int discountPirce = discountPolicy.discount(member, itemPrice);
-        return new Order(memberId, itemName, itemPrice, discountPirce);
+        return new Order(memberId,  itemName, itemPrice, discountPirce);
+    }
+
+    public MemberRepository getMemberRepository(){
+        return memberRepository;
     }
 }
