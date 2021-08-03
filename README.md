@@ -18,3 +18,5 @@
 > * Spring 싱글톤 패턴 활용법
 
 티스토리 : https://dvpdvp.tistory.com/
+
+Trello : https://trello.com/b/ldNEfeTI/daily-tasks-planner
