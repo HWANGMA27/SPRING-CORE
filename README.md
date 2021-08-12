@@ -17,6 +17,11 @@
 > * Java 외 XML 설정으로 Bean Config 테스트 
 > * Spring 싱글톤 패턴 활용법
 
+### STEP 3
+> * 같은 타입의 빈이 존재 할 경우?
+> * @Primary를 활용한 우선순위 주기
+> * @Qualifier를 활용해 같은 타입의 빈 필요에 따라 활용하기
+> 
 티스토리 : https://dvpdvp.tistory.com/
 
 Trello : https://trello.com/b/ldNEfeTI/daily-tasks-planner
