@@ -19,11 +19,17 @@
 
 ### STEP 3
 > * Autowired 원리 파악
+> * 여러 의존관계 자동주입 옵션과 선택 요령
+> * Lombok의 스프링 활용 방법
 > * Spring Bean Mapping
 > * 같은 타입의 빈이 존재 할 경우 
 > * @Primary를 활용한 우선순위 주기
 > * @Qualifier를 활용해 같은 타입의 빈 필요에 따라 활용하기
-> 
+
+### STEP 4
+> * Bean 생명주기 
+> * Bean 초기화, 소멸의 3가지 방법
+
 티스토리 : https://dvpdvp.tistory.com/
 
 Trello : https://trello.com/b/ldNEfeTI/daily-tasks-planner
