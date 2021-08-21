@@ -2,12 +2,14 @@ package hello.core.scope;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Scope;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.inject.Provider;
 
 /*
     When Client Bean which create as singleton scope call prototype bean,
@@ -37,19 +39,31 @@ public class SingletonWithPrototype1 {
 
         ClientBean clientBean2 = ac.getBean(ClientBean.class);
         int count2 = clientBean2.logic();
-        Assertions.assertThat(count2).isEqualTo(2);
+        Assertions.assertThat(count2).isEqualTo(1);
     }
 
     @Scope("singleton")
     static class ClientBean{
-        private final PrototypeBean prototypeBean;
+        //even if it's prototype scope bean, injected when client bean created
+        //private final PrototypeBean prototypeBean;
 
-        @Autowired
-        public ClientBean(PrototypeBean prototypeBean) {
-            this.prototypeBean = prototypeBean;
+        /*
+        To solvve this problem
+        1.using ObejctProvider/ObjectFactory we can call prototype bean in singleton bean
+            find(provide) bean when we need
+            @Autowired
+            private ObjectProvider<PrototypeBean> prototypeBeanProvider;
+        2.using JSR-330 Provider
+        */
+
+        private Provider<PrototypeBean> prototypeBeanProvider;
+
+        public ClientBean(Provider<PrototypeBean> prototypeBeanProvider) {
+            this.prototypeBeanProvider = prototypeBeanProvider;
         }
 
         public int logic(){
+            PrototypeBean prototypeBean = prototypeBeanProvider.get();
             prototypeBean.addCount();
             return prototypeBean.getCount();
         }
