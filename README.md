@@ -29,8 +29,8 @@
 ### STEP 4
 > * Bean 생명주기 
 > * Bean 초기화, 소멸의 3가지 방법
-> * Bean Scope
-> * Web Scope
+> * Bean Scope, Web Scope
+> * Provider와 Proxy
 
 티스토리 : https://dvpdvp.tistory.com/
 
