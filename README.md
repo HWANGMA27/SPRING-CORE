@@ -33,5 +33,3 @@
 > * Provider와 Proxy
 
 티스토리 : https://dvpdvp.tistory.com/
-
-Trello : https://trello.com/b/ldNEfeTI/daily-tasks-planner
